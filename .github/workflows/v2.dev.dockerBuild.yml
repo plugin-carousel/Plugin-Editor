@@ -1,0 +1,57 @@
+# work flow name
+name: Docker Image Dev V2 Env
+# when to trage this work flow
+on:
+  push:
+    branches:
+      - "v2-dev"
+    # tags:
+    #   - "v2.[0-9]+.[0-9]+-dev"
+
+# setup default working dir
+defaults:
+  run:
+    shell: bash
+    working-directory: ./App
+
+env:
+  AWS_CREDENTIALS: ${{ secrets.AWS_CREDENTIALS }}
+  AWS_CONFIG: ${{ secrets.AWS_CONFIG }}
+  KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_DATA }}
+
+# the jobs to run this ci
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # pull all branch and tag data
+      - name: Check out the repo
+        uses: actions/checkout@v3
+      # get the tag name
+      # - name: Get the Tag Name
+      #   id: tagName
+      #   run: echo "::set-output name=tag::${GITHUB_REF#refs/tags/}"
+
+      # publish the docker to github package
+      - name: publish to github package
+        uses: elgohr/Publish-Docker-Github-Action@v4
+        with:
+          name: datareachable/dr_Front_dataprocessingandbrief
+          username: ${{ github.actor }}
+          password: ${{ secrets.FRONT_CI_SECRETS }}
+          registry: ghcr.io
+          dockerfile: Dockerfile_v2_dev
+          tags: "v2-dev"
+
+      - name: Setup credentials
+        run: |
+          mkdir ~/.kube && mkdir ~/.aws
+          echo "${AWS_CREDENTIALS}" > ~/.aws/credentials
+          echo "${AWS_CONFIG}" > ~/.aws/config
+          echo "${KUBE_CONFIG}" > ~/.kube/config
+      - name: Install Kubectl
+        uses: possie-engine/gha-tools/kubectl@latest
+      # rollout the deployment in kubernetes
+      - name: Rollout the k8s deployment
+        run: |
+          kubectl rollout restart deployment -n front data-processing-v2-dev-deployment
