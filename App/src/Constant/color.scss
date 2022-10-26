@@ -1,0 +1,149 @@
+/**
+* file: project style color file
+* date: 2020-07-21
+* author: Frank 
+* lastModify: Frank 2020-07-21
+*/
+
+//This file will contain all the color that will be used in the project
+// color list
+$primary: #264c59;
+$primary_variant: #478da5;
+$secondary: #fd6b0b;
+$secondary_variant: #ff944e;
+$type: #000000;
+$line_dark: #828282;
+$line_light: #bdbdbd;
+$not_activated: #e8e8e8;
+$hover: #d4d4d4;
+$background: #ffffff;
+$error: #b00020;
+$gray_2: #4f4f4f;
+$gray_1: #333333;
+$gray_3: #828282;
+$gray_4: #bdbdbd;
+$gray_5: #e0e0e0;
+$minimalism_gray_3: #8d8a87;
+// shadow list
+$shadow_00dp: 0 0 0 0 $background;
+$shadow_01dp: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12),
+    0px 1px 3px rgba(0, 0, 0, 0.2);
+$shadow_02dp: 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 3px 1px rgba(0, 0, 0, 0.12),
+    0px 1px 5px rgba(0, 0, 0, 0.2);
+$shadow_03dp: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 8px rgba(0, 0, 0, 0.2);
+$shadow_04dp: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
+    0px 2px 4px rgba(0, 0, 0, 0.2);
+$shadow_06dp: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12),
+    0px 3px 5px rgba(0, 0, 0, 0.2);
+$shadow_08dp: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12),
+    0px 5px 5px rgba(0, 0, 0, 0.2);
+$shadow_09dp: 0px 9px 12px rgba(0, 0, 0, 0.14), 0px 3px 16px rgba(0, 0, 0, 0.12),
+    0px 5px 6px rgba(0, 0, 0, 0.2);
+$shadow_12dp: 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12),
+    0px 7px 8px rgba(0, 0, 0, 0.2);
+$shadow_16dp: 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12),
+    0px 8px 10px rgba(0, 0, 0, 0.2);
+$shadow_24dp: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12),
+    0px 11px 15px rgba(0, 0, 0, 0.2);
+
+/* shadow list version 2.0 */
+$shadow_mini: 0px 4px 5px -2px rgba(26, 26, 26, 0.08), 0px 2px 3px rgba(26, 26, 26, 0.06);
+$shadow_small: 0px 2px 8px rgba(26, 26, 26, 0.08), 0px 2px 4px rgba(26, 26, 26, 0.03);
+$shadow_regular: 0px 2px 6px rgba(26, 26, 26, 0.06), 0px 3px 15px rgba(26, 26, 26, 0.1);
+$shadow_medium: 0px 4px 6px rgba(26, 26, 26, 0.06), 0px 6px 20px -2px rgba(26, 26, 26, 0.14);
+$shadow_large: 0px 16px 24px -2px rgba(26, 26, 26, 0.12), 0px 2px 12px rgba(26, 26, 26, 0.1);
+
+/* color variable version 2.0 */
+/**
+* Black & White
+*/
+$black: #000000;
+$white: #ffffff;
+/**
+* Neutral colors
+*/
+$neutral_50: #fafafa;
+$neutral_100: #f5f5f5;
+$neutral_200: #ebebeb;
+$neutral_300: #bdbdbd;
+$neutral_400: #757575;
+$neutral_500: #4d4d4d;
+$neutral_600: #212121;
+$neutral_700: #0a0a0a;
+/**
+* Primary colors
+*/
+$primary_10: #f7feff;
+$primary_50: #e9f7f8;
+$primary_100: #e3fcfc;
+$primary_200: #c4f5f5;
+$primary_300: #a5e0e5;
+$primary_400: #67cdd6;
+$primary_500: #3cbbc7;
+$primary_600: #22a6b3;
+$primary_700: #1394a1;
+/**
+*Auxiliary colors
+*/
+$auxiliary_50: #fffbfa;
+$auxiliary_100: #fff4f0;
+$auxiliary_200: #ffe9e0;
+$auxiliary_300: #ffd8c9;
+$auxiliary_400: #ffb8a1;
+$auxiliary_500: #ff9370;
+$auxiliary_600: #ff7745;
+$auxiliary_700: #ff6430;
+/**
+* Danger
+*/
+$danger_50: #fffafa;
+$danger_100: #fef4f5;
+$danger_200: #ffebec;
+$danger_300: #ffc2c6;
+$danger_400: #f58e95;
+$danger_500: #eb6364;
+$danger_600: #ff525d;
+$danger_700: #ff2e3c;
+/**
+* Warning
+*/
+$warning_50: #fffbf7;
+$warning_100: #fff8f0;
+$warning_200: #fff1db;
+$warning_300: #ffd9ad;
+$warning_400: #ffbc70;
+$warning_500: #ffa033;
+$warning_600: #ff8f0f;
+$warning_700: #fe8a05;
+/**
+* Success
+*/
+$success_50: #f4fef9;
+$success_100: #ebfaf3;
+$success_200: #d8f5e7;
+$success_300: #b6f0d4;
+$success_400: #81d6ad;
+$success_500: #48c789;
+$success_600: #30b876;
+$success_700: #21ad6a;
+/**
+* Info
+*/
+$info_50: #f2faff;
+$info_100: #ebf7ff;
+$info_200: #d1edff;
+$info_300: #a3daff;
+$info_400: #5cbeff;
+$info_500: #29a9ff;
+$info_600: #0099ff;
+$info_700: #1a85ff;
+/**
+* extra color
+*/
+$bg: #f9fbfb;
+$display_font: #9197a1;
+$purple_50: #f5edfc;
+$purple_600: #aa70e0;
+$yellow_50: #fefaee;
+$yellow_600: #f2c94c;

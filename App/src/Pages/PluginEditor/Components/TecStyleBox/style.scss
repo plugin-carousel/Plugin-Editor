@@ -1,0 +1,41 @@
+/**
+* @file TecStyleBox
+* @date 2022-10-24
+* @author 
+* @lastModify wangtianci 2022-10-24
+*/
+/* <------------------------------------ **** CONSTANT IMPORT START **** ------------------------------------ */
+/** Import all the reference constant after this line */
+@import '~/Constant/breakPoint.scss';
+@import '~/Constant/font.scss';
+@import '~/Constant/color.scss';
+/* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
+/** The demo mixin is ..........*/
+@mixin demo {
+}
+/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
+/* <--------------------------- * SECTION1 * --------------------------- */
+/* <--------------------------- * SECTION1 * --------------------------- */
+.ScrollComponent {
+    padding-right: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.pluginEditorHome_listItem {
+    width: calc(100% / 6);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    > img {
+        width: calc(100% - 2.4rem);
+        border-radius: 1rem;
+        margin-left: 2.4rem;
+    }
+}
+.pluginEditorHome_none {
+    @include c_body_3();
+    margin-left: 2.4rem;
+}

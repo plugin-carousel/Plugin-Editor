@@ -1,0 +1,209 @@
+/**
+* @file PluginEditorDetail
+* @date 2022-10-17
+* @author wangtianci
+* @lastModify wangtianci 2022-10-17
+*/
+/* <------------------------------------ **** CONSTANT IMPORT START **** ------------------------------------ */
+/** Import all the reference constant after this line */
+@import '~/Constant/breakPoint.scss';
+@import '~/Constant/font.scss';
+@import '~/Constant/color.scss';
+/* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
+/** The demo mixin is ..........*/
+@mixin demo {
+}
+/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
+/* <--------------------------- * SECTION1 * --------------------------- */
+/* <--------------------------- * SECTION1 * --------------------------- */
+.PluginEditorDetail_container {
+    width: 100%;
+    height: 100%;
+    background-color: $bg;
+    position: relative;
+    // overflow: hidden;
+    // overflow: scroll;
+    min-width: 120rem;
+}
+.pluginEditorDetail_header {
+    height: 6rem;
+    width: 100%;
+    position: relative;
+}
+.pluginEditorDetail_logo {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    color: #1394a1;
+    margin-left: 4rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.pluginEditorDetail_main {
+    height: calc(100% - 26rem);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2.6rem;
+    position: absolute;
+}
+.pluginEditorDetail_imgShowContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    margin: auto;
+}
+.pluginEditorDetail_leftButton {
+    width: 6rem;
+    height: 6rem;
+    background-color: rgba(#000, 0.2);
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    > svg {
+        transform: rotate(-180deg);
+        font-size: 2rem;
+        color: #fff;
+    }
+}
+.pluginEditorDetail_imgShowBox {
+    height: 100%;
+    margin: 0 3.2rem;
+    position: relative;
+    > img {
+        height: 100%;
+        box-shadow: $shadow_small;
+    }
+}
+
+.pluginEditorDetail_imgInnerBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > img {
+        height: 100%;
+        box-shadow: $shadow_small;
+    }
+}
+
+.pluginEditorDetail_rightButton {
+    width: 6rem;
+    height: 6rem;
+    background-color: rgba(#000, 0.2);
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    > svg {
+        font-size: 2rem;
+        color: #fff;
+    }
+}
+.pluginEditorDetail_footer {
+    width: 100%;
+    // height: 13.9%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+}
+.pluginEditorDetail_selectionListBox {
+    // width: 62.5%;
+    width: 120rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    user-select: none;
+}
+.pluginEditorDetail_leftSelectionButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 3rem;
+    > svg {
+        transform: rotate(-180deg);
+        font-size: 1.6rem;
+        color: $neutral_400;
+    }
+}
+.pluginEditorDetail_selectionList {
+    width: calc(100% - 13.08rem);
+    height: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.pluginEditorDetail_selectionImg {
+    min-width: 16.66%;
+    border-radius: 0.9rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pluginEditorDetailPage_imgBox {
+    background-color: transparent;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pluginEditorDetail_Img {
+    width: 16rem;
+    border-radius: 0.6rem;
+    border: 0.1rem solid $neutral_200;
+    margin: 0.2rem;
+    &:hover {
+        height: 11.2rem;
+        transition: 5ms;
+        box-shadow: $shadow_small;
+    }
+}
+.pluginEditorDetailPage_imgBox_active {
+    background-color: rgba($primary_600, 0.6);
+    border-radius: 0.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pluginEditorDetail_img_active {
+    margin: 0.2rem;
+    width: 16rem;
+    border-radius: 0.6rem;
+    border: 0.1rem solid $primary_600;
+}
+.pluginEditorDetail_rightSelectionButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 3rem;
+    margin-right: 1.94rem;
+    > svg {
+        font-size: 1.6rem;
+        color: $neutral_400;
+    }
+}

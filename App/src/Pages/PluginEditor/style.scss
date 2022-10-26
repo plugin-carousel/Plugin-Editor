@@ -1,0 +1,150 @@
+/**
+* @file PluginEditorHome
+* @date 2022-10-17
+* @author wangtianci
+* @lastModify wangtianci 2022-10-17
+*/
+/* <------------------------------------ **** CONSTANT IMPORT START **** ------------------------------------ */
+/** Import all the reference constant after this line */
+@import '~/Constant/breakPoint.scss';
+@import '~/Constant/font.scss';
+@import '~/Constant/color.scss';
+/* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
+/** The demo mixin is ..........*/
+@mixin demo {
+}
+/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
+/* <--------------------------- * SECTION1 * --------------------------- */
+/* <--------------------------- * SECTION1 * --------------------------- */
+.PluginEditorHome_container {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+.PluginEditorHome_header {
+    width: 100%;
+    height: 7.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid $neutral_300;
+}
+.PluginEditorHome_logo {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    color: #1394a1;
+    margin-left: 4rem;
+}
+.pluginEditorHome_searchBox {
+    width: 32rem;
+    margin-right: 4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.PluginEditorHome_search {
+    height: 4rem;
+    width: 32rem;
+    outline: none;
+    border: 0.08rem solid #ebebeb;
+    border-radius: 6px;
+    background-color: #fff;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    padding-left: 1.2rem;
+    padding-right: 3.5rem;
+    @include c_body_1();
+    color: $neutral_300;
+    &:hover {
+        border-color: $primary_600;
+    }
+    &:focus {
+        border-color: $primary_600;
+    }
+}
+.pluginEditorHome_icon {
+    background-color: rgba($primary_600, 0.1);
+    width: 3.2rem;
+    height: 3.2rem;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.4rem;
+    border-radius: 0.51rem;
+    > svg {
+        color: $primary_600;
+        font-size: 1.4rem;
+    }
+}
+.pluginEditorHome_main {
+    height: calc(100vh - 8rem);
+    width: 100%;
+    overflow: hidden;
+}
+.pluginEditorHome_title {
+    @include c_h_5();
+    letter-spacing: 0.2px;
+    margin-top: 3.2rem;
+    margin-bottom: 2.2rem;
+    margin-left: 6rem;
+}
+.pluginEditorHome_styleSelection {
+    width: 32.8rem;
+    height: 3.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    margin-left: 6rem;
+}
+.pluginEditorHome_selectionItem {
+    width: 9.6rem;
+    @include c_body_1();
+    color: $neutral_500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.6rem;
+}
+.pluginEditorHome_selectionItem_active {
+    box-shadow: $shadow_small;
+    color: $primary_600;
+}
+.pluginEditorHome_list {
+    width: calc(100% - 3.6rem);
+    height: calc(100vh - 20.2rem);
+    margin-top: 2.4rem;
+    margin-left: 3.6rem;
+    overflow: hidden;
+}
+.ScrollComponent {
+    padding-right: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.pluginEditorHome_listItem {
+    width: calc(100% / 6);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    > img {
+        width: calc(100% - 2.4rem);
+        border-radius: 1rem;
+        margin-left: 2.4rem;
+    }
+}
+.pluginEditorHome_none {
+    @include c_body_3();
+    margin-left: 2.4rem;
+}

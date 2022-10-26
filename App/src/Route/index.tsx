@@ -4,7 +4,7 @@
  * author: Frank
  * lastModify: Frank 2020-07-21
  */
-import { LoadingV2, OIDCLogin } from '@datareachable/dr_front_componentlibrary';
+import { LoadingV2 } from '@datareachable/dr_front_componentlibrary';
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -15,10 +15,34 @@ export const routeList = [
         element: React.lazy(() => import('../Pages/Entry')),
         children: [
             {
-                path: '',
+                path: '/',
                 element: React.lazy(
-                    () => import(/* webpackChunkName: 'DashboardPage' */ '../Pages/Home'),
+                    () => import(/* webpackChunkName: 'DashboardPage' */ '../Pages/PluginEditor'),
                 ),
+                children: [
+                    {
+                        path: '',
+                        element: React.lazy(
+                            () => import('../Pages/PluginEditor/Components/ChinaStyleBox'),
+                        ),
+                    },
+                    {
+                        path: '/gamestyle',
+                        element: React.lazy(
+                            () => import('../Pages/PluginEditor/Components/GameStyleBox'),
+                        ),
+                    },
+                    {
+                        path: '/tecstyle',
+                        element: React.lazy(
+                            () => import('../Pages/PluginEditor/Components/TecStyleBox'),
+                        ),
+                    },
+                ],
+            },
+            {
+                path: '/plugin-detail',
+                element: React.lazy(() => import('../Pages/PluginEditorDetailPage')),
             },
         ],
     },
@@ -45,12 +69,7 @@ const RootRouter = (): JSX.Element => {
     return (
         <Suspense fallback={<LoadingV2 />}>
             <Router basename={process.env.BASENAME}>
-                <OIDCLogin
-                    projectType="profile"
-                    development_jwt="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmRldi5kYXRhcmVhY2hhYmxlLm5ldCIsInN1YiI6IjAxRlhSTkdLU1IwNjVWNlpCQVRERFRaQUNUIiwibm9uY2UiOiI4akVyaTZTWWhlNExmcG9Ma0JhZ1RJYlp0TlAxanBnVyJ9.IvJqVhn1gs6QESJmVHWe4BrRdulBIvlscPxCenDYGZQ"
-                >
-                    <Routes>{mapRouteList(routeList)}</Routes>
-                </OIDCLogin>
+                <Routes>{mapRouteList(routeList)}</Routes>
             </Router>
         </Suspense>
     );

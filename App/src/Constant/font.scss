@@ -1,0 +1,200 @@
+/**
+* file: project style font size and font family file
+* date: 2020-07-21
+* author: Frank
+* lastModify: Frank 2021-02-25
+*/
+
+// font family list
+$commonFamily: "Roboto", "alipuhui", -apple-system, BlinkMacSystemFont, "Helvetica", "Arial",
+    "Calibri", "Segoe UI", "Ping Fang SC", "Microsoft Yahei";
+
+// combined font naming rule: fs_`font weight`-`font size`
+// font weight list
+// r: regular 400
+// l: light 300
+// m: medium 500
+
+$fs_m_64: 500 6.4rem $commonFamily;
+$fs_r_63: 400 6.3rem $commonFamily;
+$fs_m_52: 500 5.2rem $commonFamily;
+$fs_r_49: 400 4.9rem $commonFamily;
+$fs_m_48: 500 4.8rem $commonFamily;
+$fs_r_48: 400 4.8rem $commonFamily;
+$fs_r_47: 400 4.7rem $commonFamily;
+$fs_r_42: 400 4.2rem $commonFamily;
+$fs_r_40: 400 4rem $commonFamily;
+$fs_l_40: 300 4rem $commonFamily;
+$fs_r_39: 400 3.9rem $commonFamily;
+$fs_r_37: 400 3.7rem $commonFamily;
+$fs_m_34: 500 3.4rem $commonFamily;
+$fs_r_34: 400 3.4rem $commonFamily;
+$fs_l_34: 300 3.4rem $commonFamily;
+$fs_r_33: 400 3.3rem $commonFamily;
+$fs_r_31: 400 3.1rem $commonFamily;
+$fs_m_30: 500 3rem $commonFamily;
+$fs_r_30: 400 3rem $commonFamily;
+$fs_l_30: 300 3rem $commonFamily;
+$fs_r_29: 400 2.9rem $commonFamily;
+$fs_m_28: 500 2.8rem $commonFamily;
+$fs_r_26: 400 2.6rem $commonFamily;
+$fs_r_25: 900 2.5rem $commonFamily;
+$fs_m_24: 500 2.4rem $commonFamily;
+$fs_r_24: 400 2.4rem $commonFamily;
+$fs_r_23: 400 2.3rem $commonFamily;
+$fs_r_22: 400 2.2rem $commonFamily;
+$fs_l_22: 300 2.2rem $commonFamily;
+$fs_l_20: 300 2rem $commonFamily;
+$fs_m_20: 500 2rem $commonFamily;
+$fs_r_20: 400 2rem $commonFamily;
+$fs_r_19: 400 1.9rem $commonFamily;
+$fs_m_18: 500 1.8rem $commonFamily;
+$fs_r_18: 400 1.8rem $commonFamily;
+$fs_l_18: 300 1.8rem $commonFamily;
+$fs_s_16: 600 1.6rem $commonFamily;
+$fs_m_16: 500 1.6rem $commonFamily;
+$fs_r_16: 400 1.6rem $commonFamily;
+$fs_l_16: 300 1.6rem $commonFamily;
+$fs_r_15: 400 1.5rem $commonFamily;
+$fs_m_14: 500 1.4rem $commonFamily;
+$fs_r_14: 400 1.4rem $commonFamily;
+$fs_r_13: 400 1.3rem $commonFamily;
+$fs_m_12: 500 1.2rem $commonFamily;
+$fs_r_12: 400 1.2rem $commonFamily;
+$fs_l_12: 300 1.2rem $commonFamily;
+$fs_r_10: 400 1rem $commonFamily;
+$fs_l_10: 300 1rem $commonFamily;
+$fs_r_9: 400 0.9rem $commonFamily;
+
+/**
+* new font variable
+*/
+@mixin h_1 {
+    font: 400 3.4rem/3.6rem $commonFamily;
+    letter-spacing: 0px;
+}
+@mixin h_2 {
+    font: 400 2.4rem/2.4rem $commonFamily;
+    letter-spacing: 0.018rem;
+}
+@mixin h_3 {
+    font: 500 2rem/2.4rem $commonFamily;
+    letter-spacing: 0.015rem;
+}
+@mixin subtitle_1 {
+    font: 400 1.6rem / 2.4rem $commonFamily;
+    letter-spacing: 0.015rem;
+}
+@mixin subtitle_2 {
+    font: 500 1.4rem/2.4rem $commonFamily;
+    letter-spacing: 0.01rem;
+}
+@mixin body_1 {
+    font: 400 1.6rem / 2.4rem $commonFamily;
+    letter-spacing: 0.05rem;
+}
+@mixin body_2 {
+    font: 400 1.4rem / 2rem $commonFamily;
+    letter-spacing: 0.025rem;
+}
+@mixin label {
+    font: 400 1.2rem / 1.6rem $commonFamily;
+    letter-spacing: 0.04rem;
+}
+@mixin overline {
+    font: 400 1rem / 1.4rem $commonFamily;
+    letter-spacing: 0.1rem;
+}
+
+/**
+* Font variable for chinese
+*/
+@mixin c_h_1 {
+    font: 500 3.4rem / 5.1rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_h_2 {
+    font: 500 3.2rem / 4.8rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_h_3 {
+    font: 500 2.8rem / 4.2rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_h_4 {
+    font: 500 2.4rem / 3.6rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_h_5 {
+    font: 500 2rem / 3rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_h_6 {
+    font: 500 1.6rem / 2.4rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_h_7 {
+    font: 500 1.4rem / 2.1rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_subtitle_1 {
+    font: 400 3.4rem / 5.1rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_subtitle_2 {
+    font: 400 3.2rem / 4.8rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_subtitle_3 {
+    font: 400 2.8rem / 4.2rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_subtitle_4 {
+    font: 400 2.4rem / 3.6rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_subtitle_5 {
+    font: 400 2rem / 3rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_body_1 {
+    font: 400 1.6rem / 2.4rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_body_2 {
+    font: 300 1.6rem / 2.4rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_body_3 {
+    font: 400 1.4rem / 2.1rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_body_4 {
+    font: 300 1.4rem / 2.1rem $commonFamily;
+    letter-spacing: 0.02rem;
+}
+
+@mixin c_label_1 {
+    font: 400 1.2rem / 1.8rem $commonFamily;
+    letter-spacing: 0.05rem;
+}
+
+@mixin c_label_2 {
+    font: 400 1rem / 1.5rem $commonFamily;
+    letter-spacing: 0.05rem;
+}

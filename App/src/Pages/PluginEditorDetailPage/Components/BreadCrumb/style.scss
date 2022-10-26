@@ -1,0 +1,47 @@
+/**
+* @file BreadCrumb
+* @date 2022-10-25
+* @author wangtianci
+* @lastModify wangtianci 2022-10-25
+*/
+/* <------------------------------------ **** CONSTANT IMPORT START **** ------------------------------------ */
+/** Import all the reference constant after this line */
+@import '~/Constant/breakPoint.scss';
+@import '~/Constant/font.scss';
+@import '~/Constant/color.scss';
+/* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
+/** The demo mixin is ..........*/
+@mixin demo {
+}
+/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
+/* <--------------------------- * SECTION1 * --------------------------- */
+/* <--------------------------- * SECTION1 * --------------------------- */
+.pluginEditorDetailHall_breadCrumbs {
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -4rem;
+}
+.pluginEditorDetailHall_home {
+    display: flex;
+    align-items: center;
+    @include c_body_1();
+    color: $neutral_300;
+    cursor: pointer;
+    > svg {
+        margin-right: 0.3rem;
+    }
+}
+.pluginEditorDetailHall_currentName {
+    @include c_body_1();
+    color: $neutral_500;
+    margin-left: 0.5rem;
+    cursor: pointer;
+
+    > span {
+        color: $neutral_400;
+        margin-left: 1rem;
+    }
+}

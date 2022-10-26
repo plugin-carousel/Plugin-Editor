@@ -6,11 +6,7 @@
  */
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
-import {
-    getJwtKey,
-    NavigationBar,
-    ScrollComponent,
-} from '@datareachable/dr_front_componentlibrary';
+import { ScrollComponent } from '@datareachable/dr_front_componentlibrary';
 import { Outlet } from 'react-router-dom';
 import styles from './style.scss';
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
@@ -29,28 +25,10 @@ const Entry = (): JSX.Element => {
     /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
     /************* This section will include this component general function *************/
 
-    /**
-     * 点击登录按钮的时候
-     */
-    const handleSignInClick = () => {
-        //
-    };
-    /**
-     * 点击退出登录的时候
-     */
-    const handleSignOutClick = () => {
-        window.localStorage.removeItem(getJwtKey());
-        //访问退出登录接口
-    };
-
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
     return (
         <>
-            <NavigationBar
-                handleLoginClick={handleSignInClick}
-                handleSignOutClick={handleSignOutClick}
-            />
-            <ScrollComponent className={styles.bodyWrap} width="100%" height="calc(100vh - 6.4rem)">
+            <ScrollComponent className={styles.bodyWrap} width="100%" height="100vh">
                 <Outlet />
             </ScrollComponent>
         </>
