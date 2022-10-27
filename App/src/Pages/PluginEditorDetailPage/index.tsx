@@ -221,7 +221,7 @@ const PluginEditorDetail = (): JSX.Element => {
     useEffect(() => {
         // console.dir(pageContainerEle.current);
 
-        if (containerWidth && containerWidth < 416) {
+        if (containerWidth && containerWidth < 516) {
             setStyleDetailList(state.renderList);
         } else {
             let showList: Array<styleItemType | undefined> = [];
