@@ -56,7 +56,7 @@ const BreadCrumb = ({ styleDetailList, selectedImg, state }): JSX.Element => {
                                     onClick={handleBackToEditor}
                                 >
                                     <Icon type="home" />
-                                    插件主题风格 /
+                                    {`插件主题风格 /`}
                                 </div>
                                 <div className={style.pluginEditorDetailHall_currentName}>
                                     {state.style === 'China'
@@ -67,7 +67,14 @@ const BreadCrumb = ({ styleDetailList, selectedImg, state }): JSX.Element => {
                                     <span
                                         className={style.pluginEditorDetailHall_currentNameDetail}
                                     >
-                                        {styleDetailList && styleDetailList[selectedImg]?.title}
+                                        ({styleDetailList && styleDetailList[selectedImg]?.title})
+                                    </span>
+                                    <span
+                                        className={
+                                            style.pluginEditorDetailHall_currentNameDetail_mobile
+                                        }
+                                    >
+                                        ({styleDetailList && styleDetailList[selectedImg]?.title})
                                     </span>
                                 </div>
                             </div>

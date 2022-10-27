@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    top: -4rem;
+    // top: -4rem;
 }
 .pluginEditorDetailHall_home {
     display: flex;
@@ -37,11 +37,58 @@
 .pluginEditorDetailHall_currentName {
     @include c_body_1();
     color: $neutral_500;
-    margin-left: 0.5rem;
+    margin-left: 0.7rem;
     cursor: pointer;
 
     > span {
         color: $neutral_400;
         margin-left: 1rem;
+    }
+    .pluginEditorDetailHall_currentNameDetail_mobile {
+        display: none;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .pluginEditorDetailHall_breadCrumbs {
+        width: 100%;
+        height: 8.5rem;
+        display: flex;
+        align-items: flex-start;
+        position: static;
+        padding-left: 4rem;
+        padding-top: 3.1rem;
+        background-color: $white;
+    }
+}
+@media screen and (max-width: 415px) {
+    .pluginEditorDetailHall_breadCrumbs {
+        height: 9rem;
+        width: 100%;
+        align-items: flex-end;
+        padding: 0 1.2rem 2.2rem;
+        overflow: hidden;
+        position: static;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        // background-color: pink;
+    }
+    .pluginEditorDetailHall_home {
+        @include c_body_3();
+        > svg {
+            font-size: 1.7rem;
+            margin-right: 0.5rem;
+        }
+    }
+    .pluginEditorDetailHall_currentName {
+        @include c_h_7();
+        > span {
+            @include c_body_3();
+        }
+        .pluginEditorDetailHall_currentNameDetail {
+            display: none;
+        }
+        .pluginEditorDetailHall_currentNameDetail_mobile {
+            display: inline-block;
+        }
     }
 }

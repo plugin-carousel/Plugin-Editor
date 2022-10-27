@@ -22,8 +22,6 @@
     height: 100%;
     background-color: $bg;
     position: relative;
-    // overflow: hidden;
-    // overflow: scroll;
     min-width: 120rem;
 }
 .pluginEditorDetail_header {
@@ -43,12 +41,12 @@
 }
 
 .pluginEditorDetail_main {
-    height: calc(100% - 26rem);
+    height: calc(100% - 26.6rem);
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 2.6rem;
+    margin-top: 3.2rem;
     position: absolute;
 }
 .pluginEditorDetail_imgShowContainer {
@@ -79,24 +77,18 @@
     height: 100%;
     margin: 0 3.2rem;
     position: relative;
-    > img {
-        height: 100%;
-        box-shadow: $shadow_small;
-    }
-}
-
-.pluginEditorDetail_imgInnerBox {
-    width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     > img {
-        height: 100%;
+        height: 94%;
         box-shadow: $shadow_small;
+        border-radius: 0.6rem;
     }
 }
-
+.pluginEditorDetailPage_mobileImgBox {
+    display: none;
+}
 .pluginEditorDetail_rightButton {
     width: 6rem;
     height: 6rem;
@@ -170,6 +162,9 @@
     align-items: center;
     justify-content: center;
 }
+.pluginEditorDetailPage_backButtom_currentTitle {
+    display: none;
+}
 .pluginEditorDetail_Img {
     width: 16rem;
     border-radius: 0.6rem;
@@ -205,5 +200,384 @@
     > svg {
         font-size: 1.6rem;
         color: $neutral_400;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .PluginEditorDetail_container {
+        min-width: 75.8rem;
+        width: 100%;
+    }
+    .pluginEditorDetail_header {
+        width: 100%;
+        height: 4.2rem;
+        background-color: $white;
+    }
+    .pluginEditorDetail_logo {
+        margin-left: 4rem;
+    }
+    .pluginEditorDetail_main {
+        height: calc(100% - 23.2rem);
+        width: 100%;
+        overflow: scroll;
+        margin: 0;
+        position: relative;
+    }
+    .pluginEditorDetail_imgShowContainer {
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+    }
+    .pluginEditorDetail_leftButton {
+        display: none;
+    }
+    .pluginEditorDetail_rightButton {
+        display: none;
+    }
+    .pluginEditorDetail_imgShowBox {
+        margin: 0;
+        width: 100%;
+        > img {
+            display: none;
+        }
+    }
+    .pluginEditorDetailPage_backButtom_currentTitle {
+        height: 10.4rem;
+        width: 100%;
+        padding-left: 4rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .pluginEditorDetailPage_backButtom {
+        @include c_body_1();
+        color: $neutral_500;
+        display: flex;
+        align-items: center;
+        margin-top: 5.35rem;
+        > svg {
+            transform: rotate(-180deg);
+            margin-right: 0.5rem;
+        }
+    }
+    .pluginEditorDetailPage_currentTitle {
+        display: none;
+    }
+    .pluginEditorDetailPage_mobileImgBox {
+        display: block;
+        align-items: center;
+        width: 100%;
+        height: 47rem;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > img {
+            width: 68.8rem;
+            height: auto;
+            box-shadow: $shadow_small;
+            border-radius: 0.6rem;
+        }
+    }
+    .pluginEditorDetail_mobileLeftButton {
+        position: absolute;
+        z-index: 9;
+        width: 4.6rem;
+        height: 4.6rem;
+        border-radius: 4rem;
+        background-color: rgba(#000, 0.2);
+        left: 1.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        > svg {
+            transform: rotate(0);
+            font-size: 1.6rem;
+            color: #fff;
+        }
+    }
+    .pluginEditorDetail_MobileRightButton {
+        position: absolute;
+        right: 1.6rem;
+        width: 4.6rem;
+        height: 4.6rem;
+        border-radius: 4rem;
+        background-color: rgba(#000, 0.2);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > svg {
+            font-size: 1.6rem;
+            color: #fff;
+        }
+    }
+
+    .pluginEditorDetail_footer {
+        width: 100%;
+        height: 19rem;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+    }
+    .pluginEditorDetail_selectionListBox {
+        width: 100%;
+        height: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        user-select: none;
+    }
+    .pluginEditorDetail_leftSelectionButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 1.5rem;
+        margin-left: 1.44rem;
+        > svg {
+            transform: rotate(-180deg);
+            font-size: 1.6rem;
+            color: $neutral_400;
+        }
+    }
+    .pluginEditorDetail_selectionList {
+        width: calc(100% - 8.98rem);
+        height: 100%;
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .pluginEditorDetail_selectionImg {
+        min-width: 25%;
+        border-radius: 0.9rem;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pluginEditorDetailPage_imgBox {
+        background-color: transparent;
+        border-radius: 0.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pluginEditorDetail_Img {
+        width: 16rem;
+        border-radius: 0.6rem;
+        border: 0.1rem solid $neutral_200;
+        margin: 0.2rem;
+        &:hover {
+            height: 11.2rem;
+            transition: 5ms;
+            box-shadow: $shadow_small;
+        }
+    }
+    .pluginEditorDetailPage_imgBox_active {
+        background-color: rgba($primary_600, 0.6);
+        border-radius: 0.6rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pluginEditorDetail_img_active {
+        margin: 0.2rem;
+        width: 16rem;
+        border-radius: 0.6rem;
+        border: 0.1rem solid $primary_600;
+    }
+    .pluginEditorDetail_rightSelectionButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-left: 1.5rem;
+        margin-right: 1.34rem;
+        > svg {
+            font-size: 1.6rem;
+            color: $neutral_400;
+        }
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .PluginEditorDetail_container {
+        min-width: 37.5rem;
+        width: 100%;
+    }
+    .pluginEditorDetail_header {
+        width: 100%;
+        height: 4.2rem;
+    }
+    .pluginEditorDetail_logo {
+        margin-left: 1.2rem;
+    }
+    .pluginEditorDetail_main {
+        height: calc(100% - 21rem);
+        width: 100%;
+        overflow: scroll;
+        margin: 0;
+        position: relative;
+    }
+    .pluginEditorDetail_imgShowContainer {
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+    }
+    .pluginEditorDetail_leftButton {
+        display: none;
+    }
+    .pluginEditorDetail_rightButton {
+        display: none;
+    }
+    .pluginEditorDetail_imgShowBox {
+        margin: 0;
+        width: 100%;
+        > img {
+            display: none;
+        }
+    }
+    .pluginEditorDetailPage_backButtom_currentTitle {
+        height: 10.4rem;
+        width: 100%;
+        padding-left: 1.2rem;
+        top: 9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .pluginEditorDetailPage_backButtom {
+        @include c_body_1();
+        color: $neutral_500;
+        display: flex;
+        align-items: center;
+        margin-top: 1.6rem;
+        > svg {
+            transform: rotate(-180deg);
+            margin-right: 0.5rem;
+        }
+    }
+    .pluginEditorDetailPage_currentTitle {
+        display: block;
+        @include c_h_6();
+        color: $neutral_500;
+        margin-bottom: 1.2rem;
+        > span {
+            @include c_body_1();
+            color: $neutral_400;
+            margin-left: 0.5rem;
+        }
+    }
+    .pluginEditorDetailPage_mobileImgBox {
+        // position: absolute;
+        display: block;
+        align-items: center;
+        width: 100%;
+        height: 32.4rem;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > img {
+            width: calc(100% - 2.6rem);
+            width: 35.1rem;
+            height: auto;
+            box-shadow: none;
+            border-radius: 0.4rem;
+        }
+    }
+    .pluginEditorDetail_mobileLeftButton {
+        position: absolute;
+        z-index: 9;
+        width: 2rem;
+        height: 4rem;
+        border-radius: 2px 8px 8px 2px;
+        background-color: rgba(#000, 0.2);
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        > svg {
+            transform: rotate(0);
+            font-size: 1.4rem;
+            color: #fff;
+        }
+    }
+    .pluginEditorDetail_MobileRightButton {
+        position: absolute;
+        right: 0;
+        width: 2rem;
+        height: 4rem;
+        background-color: rgba(#000, 0.2);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px 8px 8px 2px;
+        > svg {
+            font-size: 1.4rem;
+            color: #fff;
+        }
+    }
+
+    .pluginEditorDetail_footer {
+        width: 100%;
+        overflow: hidden;
+    }
+    .pluginEditorDetail_selectionListBox {
+        height: 16.8rem;
+        width: 37.5rem;
+    }
+    .pluginEditorDetail_leftSelectionButton,
+    .pluginEditorDetail_rightSelectionButton {
+        display: none;
+        margin: 0;
+    }
+    .pluginEditorDetail_selectionList {
+        width: calc(100% - 2.4rem);
+        margin: 0 0 0 2.4rem;
+        display: flex;
+        align-items: center;
+    }
+    .pluginEditorDetail_selectionImg {
+        width: 13rem;
+        min-width: 13rem;
+        height: 10.6rem;
+        padding-right: 1.6rem;
+    }
+    .pluginEditorDetail_Img {
+        width: 10.8rem;
+        height: 10rem;
+        border-radius: 0.4rem;
+        border: 0.1rem solid $neutral_200;
+        margin: 0.2rem;
+    }
+    .pluginEditorDetailPage_imgBox_active {
+        background-color: rgba($primary_600, 0.6);
+        border-radius: 0.6rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pluginEditorDetail_img_active {
+        margin: 0.2;
+        width: 11rem;
+        height: 10.2rem;
+        border-radius: 0.6rem;
+        border: 0.1rem solid $primary_600;
+        background-color: #fff;
     }
 }

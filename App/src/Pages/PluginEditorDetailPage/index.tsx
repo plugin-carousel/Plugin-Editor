@@ -18,7 +18,7 @@ import {
     styleItemType,
 } from '~/DefaultData/styleDetail';
 import { useEffect, useState, useRef } from 'react';
-import { useLocation, Location } from 'react-router-dom';
+import { useLocation, Location, useNavigate } from 'react-router-dom';
 import BreadCrumb from './Components/BreadCrumb';
 
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
@@ -59,6 +59,10 @@ const PluginEditorDetail = (): JSX.Element => {
     const state = location.state as statepProps;
 
     /**
+     * navigate
+     */
+    const navigate = useNavigate();
+    /**
      * selectionListEle
      */
     const selectionListEle = useRef<HTMLDivElement>(null);
@@ -67,6 +71,17 @@ const PluginEditorDetail = (): JSX.Element => {
      * selectionImgEle
      */
     const selectionImgEle = useRef<HTMLDivElement>(null);
+
+    /**
+     * selectionImgEle width
+     */
+    const selectionImgEleWidth = selectionImgEle.current?.offsetWidth;
+    console.dir(selectionImgEle.current);
+
+    /**
+     *
+     */
+    const pageContainerEle = useRef<HTMLDivElement>(null);
     /* <------------------------------------ **** PARAMETER END **** ------------------------------------ */
     /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
     /************* This section will include this component general function *************/
@@ -83,16 +98,22 @@ const PluginEditorDetail = (): JSX.Element => {
      * 点击显示上一张
      */
     const handleSelectPreviousImg = () => {
+        console.log('123');
+
         let previousImg = selectedImg - 1;
         if (previousImg === -1 && styleDetailList?.length) {
             previousImg = styleDetailList?.length - 1;
         }
-        const imgCurrentLeft = 178 * previousImg;
         setSelectedImg(previousImg);
-        selectionListEle.current?.scrollTo({
-            left: imgCurrentLeft,
-            behavior: 'smooth',
-        });
+        if (selectionImgEleWidth) {
+            console.log(selectionImgEleWidth);
+
+            const imgCurrentLeft = selectionImgEleWidth * previousImg;
+            selectionListEle.current?.scrollTo({
+                left: imgCurrentLeft,
+                behavior: 'smooth',
+            });
+        }
     };
 
     /**
@@ -105,11 +126,15 @@ const PluginEditorDetail = (): JSX.Element => {
         }
 
         setSelectedImg(nextImg);
-        const imgCurrentLeft = 178 * nextImg;
-        selectionListEle.current?.scrollTo({
-            left: imgCurrentLeft,
-            behavior: 'smooth',
-        });
+        if (selectionImgEleWidth) {
+            console.log(selectionImgEleWidth);
+
+            const imgCurrentLeft = selectionImgEleWidth * nextImg;
+            selectionListEle.current?.scrollTo({
+                left: imgCurrentLeft,
+                behavior: 'smooth',
+            });
+        }
     };
 
     //获取selectionList
@@ -139,48 +164,106 @@ const PluginEditorDetail = (): JSX.Element => {
     /**
      * 设置进页面时，要渲染的图片列表
      */
-    useEffect(() => {
-        let showList: Array<styleItemType | undefined> = [];
-        if (state.style === 'China') {
-            showList = state.renderList.map((item) => {
-                return ChinaStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-            })
-                ? state.renderList.map((item) => {
-                      return ChinaStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-                  })
-                : ChinaStyleDetailList;
-            setStyleDetailList(showList);
-        } else if (state.style === 'game') {
-            showList = state.renderList.map((item) => {
-                return gameStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-            })
-                ? state.renderList.map((item) => {
-                      return gameStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-                  })
-                : gameStyleDetailList;
-            setStyleDetailList(showList);
-        } else {
-            showList = state.renderList.map((item) => {
-                return tecStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-            })
-                ? state.renderList.map((item) => {
-                      return tecStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-                  })
-                : tecStyleDetailList;
-            setStyleDetailList(showList);
-        }
-    }, [state.style, state.renderList]);
+    // useEffect(() => {
+    //     let showList: Array<styleItemType | undefined> = [];
+    //     if (state.style === 'China') {
+    //         showList = state.renderList.map((item) => {
+    //             return ChinaStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
+    //         })
+    //             ? state.renderList.map((item) => {
+    //                   return ChinaStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
+    //               })
+    //             : ChinaStyleDetailList;
+    //         setStyleDetailList(showList);
+    //     } else if (state.style === 'game') {
+    //         showList = state.renderList.map((item) => {
+    //             return gameStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
+    //         })
+    //             ? state.renderList.map((item) => {
+    //                   return gameStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
+    //               })
+    //             : gameStyleDetailList;
+    //         setStyleDetailList(showList);
+    //     } else {
+    //         showList = state.renderList.map((item) => {
+    //             return tecStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
+    //         })
+    //             ? state.renderList.map((item) => {
+    //                   return tecStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
+    //               })
+    //             : tecStyleDetailList;
+    //         setStyleDetailList(showList);
+    //     }
+    // }, [state.style, state.renderList]);
 
     /**
      * 设置进页面时，被选中的图片
      */
     useEffect(() => {
         setSelectedImg(state.index);
-    }, [state]);
+
+        /**
+         * 更新selectionList的left值
+         */
+        if (selectionImgEleWidth) {
+            const imgCurrentLeft = selectionImgEleWidth * state.index;
+            selectionListEle.current?.scrollTo({
+                left: imgCurrentLeft,
+                behavior: 'smooth',
+            });
+        }
+    }, [state, styleDetailList, selectionImgEleWidth]);
+
+    /**
+     * 视口宽度变化，更换图片
+     */
+    const containerWidth = pageContainerEle.current?.clientWidth;
+    useEffect(() => {
+        // console.dir(pageContainerEle.current);
+
+        if (containerWidth && containerWidth < 416) {
+            setStyleDetailList(state.renderList);
+        } else {
+            let showList: Array<styleItemType | undefined> = [];
+            if (state.style === 'China') {
+                showList = state.renderList.map((item) => {
+                    return ChinaStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
+                })
+                    ? state.renderList.map((item) => {
+                          return ChinaStyleDetailList.find(
+                              (Detailitem) => Detailitem.id === item.id,
+                          );
+                      })
+                    : ChinaStyleDetailList;
+                setStyleDetailList(showList);
+            } else if (state.style === 'game') {
+                showList = state.renderList.map((item) => {
+                    return gameStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
+                })
+                    ? state.renderList.map((item) => {
+                          return gameStyleDetailList.find(
+                              (Detailitem) => Detailitem.id === item.id,
+                          );
+                      })
+                    : gameStyleDetailList;
+                setStyleDetailList(showList);
+            } else {
+                showList = state.renderList.map((item) => {
+                    return tecStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
+                })
+                    ? state.renderList.map((item) => {
+                          return tecStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
+                      })
+                    : tecStyleDetailList;
+                setStyleDetailList(showList);
+            }
+        }
+    }, [containerWidth, state.style, state.renderList]);
+
     /* <------------------------------------ **** EFFECT END **** ------------------------------------ */
 
     return (
-        <div className={style.PluginEditorDetail_container}>
+        <div className={style.PluginEditorDetail_container} ref={pageContainerEle}>
             <div className={style.pluginEditorDetail_header}>
                 <div className={style.pluginEditorDetail_logo}>dataReachable</div>
             </div>
@@ -207,7 +290,60 @@ const PluginEditorDetail = (): JSX.Element => {
                                             state={state}
                                             selectedImg={selectedImg}
                                         />
+                                        <div
+                                            className={
+                                                style.pluginEditorDetailPage_backButtom_currentTitle
+                                            }
+                                        >
+                                            <div
+                                                className={style.pluginEditorDetailPage_backButtom}
+                                                onClick={() => navigate(-1)}
+                                            >
+                                                <Icon type="nextArrow" />
+                                                返回
+                                            </div>
+                                            <div
+                                                className={
+                                                    style.pluginEditorDetailPage_currentTitle
+                                                }
+                                            >
+                                                {state.style === 'China'
+                                                    ? '中国风'
+                                                    : state.style === 'tec'
+                                                    ? '科技风'
+                                                    : '游戏风'}
+                                                <span
+                                                    className={
+                                                        style.pluginEditorDetailHall_currenTitleDetail
+                                                    }
+                                                >
+                                                    (
+                                                    {styleDetailList &&
+                                                        styleDetailList[selectedImg]?.title}
+                                                    )
+                                                </span>
+                                            </div>
+                                        </div>
                                         <img src={item?.cover} />
+                                        <div className={style.pluginEditorDetailPage_mobileImgBox}>
+                                            <div
+                                                className={
+                                                    style.pluginEditorDetail_mobileLeftButton
+                                                }
+                                                onClick={handleSelectPreviousImg}
+                                            >
+                                                <Icon type="open" />
+                                            </div>
+                                            <img src={item?.cover} />
+                                            <div
+                                                className={
+                                                    style.pluginEditorDetail_MobileRightButton
+                                                }
+                                                onClick={handleSelectNextImg}
+                                            >
+                                                <Icon type="open" />
+                                            </div>
+                                        </div>
                                     </div>
                                 );
                             }
