@@ -60,12 +60,15 @@
     padding-left: 1.2rem;
     padding-right: 3.5rem;
     @include c_body_1();
-    color: $neutral_300;
+    color: $neutral_600;
     &:hover {
         border-color: $primary_600;
     }
     &:focus {
         border-color: $primary_600;
+    }
+    &::placeholder {
+        color: $neutral_300;
     }
 }
 .pluginEditorHome_icon {
@@ -107,6 +110,7 @@
 }
 .pluginEditorHome_selectionItem {
     width: 9.6rem;
+    height: 3.6rem;
     @include c_body_1();
     color: $neutral_500;
     display: flex;
@@ -266,6 +270,7 @@
         background-color: $white;
     }
     .pluginEditorHome_selectionItem {
+        height: 2rem;
         @include c_body_3();
         color: $neutral_400;
         width: 5.6rem;

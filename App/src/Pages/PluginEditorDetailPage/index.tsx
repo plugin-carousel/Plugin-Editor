@@ -8,7 +8,7 @@
 /** This section will include all the necessary dependence for this tsx file */
 // import React from "react";
 import style from './style.scss';
-import { Icon } from '@datareachable/dr_front_componentlibrary';
+import { Icon, Skeleton } from '@datareachable/dr_front_componentlibrary';
 import getClassNames from '~/Utils/getClassNames';
 
 import {
@@ -259,6 +259,7 @@ const PluginEditorDetail = (): JSX.Element => {
             }
         }
     }, [containerWidth, state.style, state.renderList]);
+    console.log(Skeleton);
 
     /* <------------------------------------ **** EFFECT END **** ------------------------------------ */
 
@@ -324,7 +325,18 @@ const PluginEditorDetail = (): JSX.Element => {
                                                 </span>
                                             </div>
                                         </div>
-                                        <img src={item?.cover} />
+                                        <div
+                                            className={style.pluginEditorDetailPage_img_Skeleton}
+                                        ></div>
+                                        <img
+                                            src={item?.cover}
+                                            onLoad={() => {
+                                                const imgSkeleton = document.querySelector(
+                                                    '.pluginEditorDetailPage_img_Skeleton',
+                                                ) as HTMLDivElement;
+                                                imgSkeleton.style.display = 'none';
+                                            }}
+                                        />
                                         <div className={style.pluginEditorDetailPage_mobileImgBox}>
                                             <div
                                                 className={

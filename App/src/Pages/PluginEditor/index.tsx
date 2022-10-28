@@ -153,6 +153,7 @@ const PluginEditorHome = (): JSX.Element => {
 
             navigate('/tecstyle', { state: { renderList: searchList } });
         }
+        setSearchValue('');
     };
 
     /**
@@ -167,12 +168,7 @@ const PluginEditorHome = (): JSX.Element => {
             handleClickSearch();
         }
     };
-    /**
-     * 搜索框失去焦点
-     */
-    const handleInputBlur = () => {
-        handleClickSearch();
-    };
+
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
     /* <------------------------------------ **** EFFECT START **** ------------------------------------ */
     /************* This section will include this component general function *************/
@@ -223,11 +219,10 @@ const PluginEditorHome = (): JSX.Element => {
                 <div className={style.pluginEditorHome_searchBox}>
                     <input
                         className={style.PluginEditorHome_search}
-                        placeholder="搜索..."
+                        placeholder="搜索类型名称..."
                         value={searchValue}
                         onChange={(e) => setSearchValue(e.target.value)}
                         onKeyUp={(e) => handleKeyup(e)}
-                        onBlur={handleInputBlur}
                     />
                     <div className={style.pluginEditorHome_icon} onClick={handleClickSearch}>
                         <Icon type="search" />

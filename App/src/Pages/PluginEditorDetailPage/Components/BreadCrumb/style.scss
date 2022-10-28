@@ -17,11 +17,15 @@
 /* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
 /* <--------------------------- * SECTION1 * --------------------------- */
 /* <--------------------------- * SECTION1 * --------------------------- */
+.breadCrumb_container {
+    height: 2.4rem;
+}
 .pluginEditorDetailHall_breadCrumbs {
     height: 2.4rem;
+    min-height: 2.4rem;
     display: flex;
     align-items: center;
-    position: absolute;
+    // position: absolute;
 }
 .pluginEditorDetailHall_home {
     display: flex;
@@ -48,20 +52,28 @@
     }
 }
 @media screen and (max-width: 1200px) {
+    .breadCrumb_container {
+        height: 8.5rem;
+        background-color: $white;
+    }
     .pluginEditorDetailHall_breadCrumbs {
         width: 100%;
         height: 8.5rem;
+
         display: flex;
         align-items: flex-start;
         position: static;
         padding-left: 4rem;
-        padding-top: 3.1rem;
+        padding-top: 4.1rem;
         background-color: $white;
     }
 }
 @media screen and (max-width: 515px) {
+    .breadCrumb_container {
+        height: 7.3rem;
+    }
     .pluginEditorDetailHall_breadCrumbs {
-        height: 9rem;
+        height: 7.3rem;
         width: 100%;
         align-items: flex-end;
         padding: 0 1.2rem 2.2rem;
