@@ -84,6 +84,7 @@ const PluginEditorHome = (): JSX.Element => {
         } else {
             navigate('tecstyle');
         }
+        setSearchValue('');
     };
 
     const navigate = useNavigate();
@@ -153,7 +154,6 @@ const PluginEditorHome = (): JSX.Element => {
 
             navigate('/tecstyle', { state: { renderList: searchList } });
         }
-        setSearchValue('');
     };
 
     /**

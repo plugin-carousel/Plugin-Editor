@@ -76,7 +76,6 @@ const PluginEditorDetail = (): JSX.Element => {
      * selectionImgEle width
      */
     const selectionImgEleWidth = selectionImgEle.current?.offsetWidth;
-    console.dir(selectionImgEle.current);
 
     /**
      *
@@ -98,16 +97,12 @@ const PluginEditorDetail = (): JSX.Element => {
      * 点击显示上一张
      */
     const handleSelectPreviousImg = () => {
-        console.log('123');
-
         let previousImg = selectedImg - 1;
         if (previousImg === -1 && styleDetailList?.length) {
             previousImg = styleDetailList?.length - 1;
         }
         setSelectedImg(previousImg);
         if (selectionImgEleWidth) {
-            console.log(selectionImgEleWidth);
-
             const imgCurrentLeft = selectionImgEleWidth * previousImg;
             selectionListEle.current?.scrollTo({
                 left: imgCurrentLeft,
@@ -117,7 +112,7 @@ const PluginEditorDetail = (): JSX.Element => {
     };
 
     /**
-     * 点击显示上一张
+     * 点击显示下一张
      */
     const handleSelectNextImg = () => {
         let nextImg = selectedImg + 1;
@@ -127,8 +122,6 @@ const PluginEditorDetail = (): JSX.Element => {
 
         setSelectedImg(nextImg);
         if (selectionImgEleWidth) {
-            console.log(selectionImgEleWidth);
-
             const imgCurrentLeft = selectionImgEleWidth * nextImg;
             selectionListEle.current?.scrollTo({
                 left: imgCurrentLeft,
@@ -160,42 +153,6 @@ const PluginEditorDetail = (): JSX.Element => {
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
     /* <------------------------------------ **** EFFECT START **** ------------------------------------ */
     /************* This section will include this component general function *************/
-
-    /**
-     * 设置进页面时，要渲染的图片列表
-     */
-    // useEffect(() => {
-    //     let showList: Array<styleItemType | undefined> = [];
-    //     if (state.style === 'China') {
-    //         showList = state.renderList.map((item) => {
-    //             return ChinaStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-    //         })
-    //             ? state.renderList.map((item) => {
-    //                   return ChinaStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-    //               })
-    //             : ChinaStyleDetailList;
-    //         setStyleDetailList(showList);
-    //     } else if (state.style === 'game') {
-    //         showList = state.renderList.map((item) => {
-    //             return gameStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-    //         })
-    //             ? state.renderList.map((item) => {
-    //                   return gameStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-    //               })
-    //             : gameStyleDetailList;
-    //         setStyleDetailList(showList);
-    //     } else {
-    //         showList = state.renderList.map((item) => {
-    //             return tecStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-    //         })
-    //             ? state.renderList.map((item) => {
-    //                   return tecStyleDetailList.find((Detailitem) => Detailitem.id === item.id);
-    //               })
-    //             : tecStyleDetailList;
-    //         setStyleDetailList(showList);
-    //     }
-    // }, [state.style, state.renderList]);
-
     /**
      * 设置进页面时，被选中的图片
      */
@@ -219,8 +176,6 @@ const PluginEditorDetail = (): JSX.Element => {
      */
     const containerWidth = pageContainerEle.current?.clientWidth;
     useEffect(() => {
-        // console.dir(pageContainerEle.current);
-
         if (containerWidth && containerWidth < 516) {
             setStyleDetailList(state.renderList);
         } else {
@@ -259,7 +214,6 @@ const PluginEditorDetail = (): JSX.Element => {
             }
         }
     }, [containerWidth, state.style, state.renderList]);
-    console.log(Skeleton);
 
     /* <------------------------------------ **** EFFECT END **** ------------------------------------ */
 
