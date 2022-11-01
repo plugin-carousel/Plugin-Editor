@@ -6,7 +6,7 @@
  */
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import style from './style.scss';
 import { Icon } from '@datareachable/dr_front_componentlibrary';
 import getClassNames from '~/Utils/getClassNames';
@@ -59,6 +59,10 @@ const PluginEditorHome = (): JSX.Element => {
      */
     const location = useLocation();
 
+    /**
+     * input
+     */
+    const iptRef = useRef<HTMLInputElement>(null);
     /* <------------------------------------ **** PARAMETER END **** ------------------------------------ */
     /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
     /************* This section will include this component general function *************/
@@ -154,6 +158,7 @@ const PluginEditorHome = (): JSX.Element => {
 
             navigate('/tecstyle', { state: { renderList: searchList } });
         }
+        iptRef.current?.blur();
     };
 
     /**
@@ -223,6 +228,7 @@ const PluginEditorHome = (): JSX.Element => {
                         value={searchValue}
                         onChange={(e) => setSearchValue(e.target.value)}
                         onKeyUp={(e) => handleKeyup(e)}
+                        ref={iptRef}
                     />
                     <div className={style.pluginEditorHome_icon} onClick={handleClickSearch}>
                         <Icon type="search" />
