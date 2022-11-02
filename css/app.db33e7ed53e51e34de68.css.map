@@ -1,0 +1,1 @@
+{"version":3,"file":"css/app.db33e7ed53e51e34de68.css","mappings":"AAAA;IACI,SAAS;IACT,UAAU;IACV,sBAAsB;AAC1B","sources":["webpack:///./src/global.css"],"sourcesContent":["* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n"],"names":[],"sourceRoot":""}
