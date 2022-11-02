@@ -1,0 +1,2 @@
+/*! For license information please see 162.52dccb8c49ec30da9b18.js.LICENSE.txt */
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[162],{464:(e,s,t)=>{t.r(s),t.d(s,{default:()=>k});var n=t(10),u=t(249),a=t(0),c=t(3);const k=()=>{const e=(0,u.useNavigate)();return c.log("404"),(0,a.jsx)(n.NO,{type:"404",onBtnClick:()=>e("/")})}}}]);
