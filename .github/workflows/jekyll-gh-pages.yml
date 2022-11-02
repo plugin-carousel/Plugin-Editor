@@ -31,8 +31,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "16"
-      - run: npm i
-      - run: npm run releases
+      # - run: npm i
+      # - run: npm run releases
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
