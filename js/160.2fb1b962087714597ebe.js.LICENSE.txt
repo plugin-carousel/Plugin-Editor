@@ -1,0 +1,46 @@
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
+
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+
+/* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */
+
+/* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
+
+/* <------------------------------------ **** INTERFACE END **** ------------------------------------ */
+
+/* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
+
+/* ScrollComponent */
+
+/* binding */
+
+/* harmony default export */
+
+/*#__PURE__*/
+
+/**
+ * @file 入口
+ * @date 2022-10-10
+ * @author xuejie.he
+ * @lastModify xuejie.he 2022-10-10
+ */
+
+/** This section will include all the interface for this tsx file */
+
+/** This section will include all the necessary dependence for this tsx file */
+
+/***/
+
+// CONCATENATED MODULE: ./src/Pages/Entry/style.scss
+
+// ESM COMPAT FLAG
+
+// EXPORTS
+
+// EXTERNAL MODULE: ./node_modules/@datareachable/dr_front_componentlibrary/index.ts + 476 modules
+
+// EXTERNAL MODULE: ./node_modules/react-router-dom/dist/umd/react-router-dom.production.min.js
+
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+
+// extracted by mini-css-extract-plugin
