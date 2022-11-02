@@ -275,6 +275,7 @@
         color: $neutral_400;
         width: 5.6rem;
         position: relative;
+        overflow: hidden;
     }
     .pluginEditorHome_selectionItem_active {
         color: $primary_600;
