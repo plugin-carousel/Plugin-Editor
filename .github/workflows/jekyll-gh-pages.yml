@@ -31,10 +31,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "16"
-      - run: |
-          cd ./App
-          yarn
-          yarn releases
+      - run: cd ./App/
+      - run: yarn
+      - run: yarn releases
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
