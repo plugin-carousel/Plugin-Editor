@@ -1,2 +1,0 @@
-/*! For license information please see 160.ddcb688f132d609d29bf.js.LICENSE.txt */
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[160],{459:(e,s,t)=>{t.r(s),t.d(s,{default:()=>n});var a=t(10),h=t(249);const c="bodyWrap";var l,r=t(0);const n=()=>(0,r.jsx)(r.Fragment,{children:(0,r.jsx)(a.lg,{className:c,width:"100%",height:"100vh",children:l||(l=(0,r.jsx)(h.Outlet,{}))})})}}]);

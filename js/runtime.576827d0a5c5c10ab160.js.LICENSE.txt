@@ -1,0 +1,97 @@
+/* webpack/runtime/chunk loaded */
+
+/* webpack/runtime/create fake namespace object */
+
+/* webpack/runtime/css loading */
+
+/* webpack/runtime/jsonp chunk loading */
+
+/* webpack/runtime/load script */
+
+/************************************************************************/
+
+/******/
+
+// 0 means "already installed".
+
+// Check if module is in cache
+
+// Create a new module (and put it into the cache)
+
+// Execute the module function
+
+// Flag the module as loaded
+
+// JSONP chunk loading for javascript
+
+// Return the exports of the module
+
+// The chunk loading function for additional chunks
+
+// The module cache
+
+// The require function
+
+// This file contains only the entry chunk.
+
+// This function allow to reference async chunks
+
+// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+
+// a Promise means "currently loading".
+
+// add "moreModules" to the modules object,
+
+// avoid mem leaks in IE.
+
+// avoid mem leaks.
+
+// create a fake namespace object
+
+// create error before stack unwound to get useful stacktrace later
+
+// data-webpack is not used as build has no uniqueName
+
+// define __esModule on exports
+
+// define getter functions for harmony exports
+
+// expose the modules object (__webpack_modules__)
+
+// getDefaultExport function for compatibility with non-harmony modules
+
+// install a JSONP callback for chunk loading
+
+// loadScript function to load a script via script tag
+
+// mode & 16: return value when it's Promise-like
+
+// mode & 1: value is a module id, require it
+
+// mode & 2: merge all properties of value into the ns
+
+// mode & 4: return value when already ns object
+
+// mode & 8|1: behave like require
+
+// no HMR
+
+// no HMR manifest
+
+// no baseURI
+
+// no prefetching
+
+// no preloaded
+
+// object to store loaded and loading chunks
+
+// setup Promise in chunk cache
+
+// start chunk loading
+
+// then flag all "chunkIds" as loaded and fire callback
+
+// undefined = chunk not loaded, null = chunk preloaded/prefetched
+
+// webpackBootstrap
