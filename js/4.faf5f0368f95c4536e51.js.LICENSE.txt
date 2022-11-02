@@ -1,0 +1,92 @@
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
+
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+
+/* <------------------------------------ **** EFFECT END **** ------------------------------------ */
+
+/* <------------------------------------ **** EFFECT START **** ------------------------------------ */
+
+/* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */
+
+/* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
+
+/* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
+
+/* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
+
+/* <------------------------------------ **** INTERFACE END **** ------------------------------------ */
+
+/* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
+
+/* <------------------------------------ **** PARAMETER END **** ------------------------------------ */
+
+/* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
+
+/* <------------------------------------ **** STATE END **** ------------------------------------ */
+
+/* <------------------------------------ **** STATE START **** ------------------------------------ */
+
+/* ChinaStyleOverviewList */
+
+/* ChinaStyleOverviewList.map */
+
+/* ScrollComponent */
+
+/* binding */
+
+/* harmony default export */
+
+/*#__PURE__*/
+
+/**
+   * location
+   */
+
+/**
+   * navigate
+   */
+
+/**
+   * 点击图片 跳转到plugin-detail
+   * @param style
+   * @param index
+   */
+
+/**
+   * 要渲染的图片列表
+   */
+
+/**
+ * @file ChinaStyleBox
+ * @date 2022-10-24
+ * @author wangtianci
+ * @lastModify wangtianci 2022-10-24
+ */
+
+/** This section will include all the interface for this tsx file */
+
+/** This section will include all the necessary dependence for this tsx file */
+
+/************* This section will include this component HOOK function *************/
+
+/************* This section will include this component general function *************/
+
+/************* This section will include this component parameter *************/
+
+/***/
+
+// CONCATENATED MODULE: ./src/Assets/image/styleOverview/bg_ChinaStyle_01.png
+
+// CONCATENATED MODULE: ./src/Pages/PluginEditor/Components/ChinaStyleBox/index.tsx
+
+// CONCATENATED MODULE: ./src/Pages/PluginEditor/Components/ChinaStyleBox/style.scss
+
+// ESM COMPAT FLAG
+
+// EXPORTS
+
+// EXTERNAL MODULE: ./node_modules/react-router-dom/dist/umd/react-router-dom.production.min.js
+
+// EXTERNAL MODULE: ./src/DefaultData/styleOverview.ts + 43 modules
+
+// extracted by mini-css-extract-plugin
