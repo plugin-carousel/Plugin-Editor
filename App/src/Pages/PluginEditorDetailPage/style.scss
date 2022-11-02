@@ -184,13 +184,15 @@
 }
 .pluginEditorDetail_Img {
     width: 16rem;
+    height: 11rem;
     border-radius: 0.6rem;
     border: 0.1rem solid $neutral_200;
     margin: 0.2rem;
     &:hover {
-        height: 11.2rem;
-        transition: 5ms;
+        height: 12.23rem;
+        width: 17.8rem;
         box-shadow: $shadow_small;
+        transition: height 500ms ease-out, width 500ms ease-out;
     }
 }
 .pluginEditorDetailPage_imgBox_active {
@@ -403,9 +405,11 @@
         border: 0.1rem solid $neutral_200;
         margin: 0.2rem;
         &:hover {
-            height: 11.2rem;
-            transition: 5ms;
+            box-shadow: none;
+            height: 12.23rem;
+            width: 17.8rem;
             box-shadow: $shadow_small;
+            transition: height 500ms ease-out, width 500ms ease-out;
         }
     }
     .pluginEditorDetailPage_imgBox_active {
@@ -595,6 +599,11 @@
         border-radius: 0.4rem;
         border: 0.1rem solid $neutral_200;
         margin: 0.2rem;
+        &:hover {
+            width: 13rem;
+            height: 12rem;
+            box-shadow: none;
+        }
     }
     .pluginEditorDetailPage_imgBox_active {
         background-color: rgba($primary_600, 0.6);
