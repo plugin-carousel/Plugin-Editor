@@ -26,9 +26,11 @@ jobs:
           echo "${{ secrets.NPMRC_TOKEN }}" > .npmrc
           npm install
           npm run releases
+          echo "${{ secrets.SH_KEY }}" > /root/.ssh/id_rsa
+          ssh -i /root/.ssh/id_rsa ido@42.192.223.227 -p 22
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: page
-          folder: ./App/build # The folder the action should deploy.
+      # - name: Deploy 🚀
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     branch: page
+      #     folder: ./App/build # The folder the action should deploy.
