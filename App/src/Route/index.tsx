@@ -6,7 +6,7 @@
  */
 import { LoadingV2 } from '@datareachable/dr_front_componentlibrary';
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 /* <------------------------------------ **** Lazy Loading all the pages START **** ------------------------------------ */
 export const routeList = [
@@ -68,9 +68,9 @@ const RootRouter = (): JSX.Element => {
 
     return (
         <Suspense fallback={<LoadingV2 />}>
-            <Router basename={process.env.BASENAME}>
+            <HashRouter basename={process.env.BASENAME}>
                 <Routes>{mapRouteList(routeList)}</Routes>
-            </Router>
+            </HashRouter>
         </Suspense>
     );
 };

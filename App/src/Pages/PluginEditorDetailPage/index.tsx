@@ -7,18 +7,18 @@
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
 // import React from "react";
-import style from './style.scss';
-import { Icon, Skeleton } from '@datareachable/dr_front_componentlibrary';
+import { Icon } from '@datareachable/dr_front_componentlibrary';
 import getClassNames from '~/Utils/getClassNames';
+import style from './style.scss';
 
+import { useEffect, useRef, useState } from 'react';
+import { Location, useLocation, useNavigate } from 'react-router-dom';
 import {
     ChinaStyleDetailList,
     gameStyleDetailList,
-    tecStyleDetailList,
     styleItemType,
+    tecStyleDetailList,
 } from '~/DefaultData/styleDetail';
-import { useEffect, useState, useRef } from 'react';
-import { useLocation, Location, useNavigate } from 'react-router-dom';
 import BreadCrumb from './Components/BreadCrumb';
 
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
