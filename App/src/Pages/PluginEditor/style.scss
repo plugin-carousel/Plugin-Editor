@@ -222,10 +222,10 @@
     }
     .PluginEditorHome_header {
         background-color: #fff;
-        height: 11.8rem;
+        height: auto;
         border-bottom: 0;
-        display: block;
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
     .PluginEditorHome_logo {
         margin-top: 2rem;
@@ -261,11 +261,6 @@
     }
     .pluginEditorHome_title {
         display: none;
-        // position: absolute;
-        // margin-top: 0rem;
-        // margin-bottom: 0rem;
-        // margin-left: 1.2rem;
-        // background-color: $white;
     }
     .pluginEditorHome_styleSelection {
         width: 100%;
