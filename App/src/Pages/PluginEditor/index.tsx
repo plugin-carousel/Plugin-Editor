@@ -222,6 +222,7 @@ const PluginEditorHome = (): JSX.Element => {
             <div className={style.PluginEditorHome_header}>
                 <div className={style.PluginEditorHome_logo}>dataReachable</div>
                 <div className={style.pluginEditorHome_searchBox}>
+                    <div className={style.pluginEditorHome_Mobiletitle}>插件主题风格</div>
                     <input
                         className={style.PluginEditorHome_search}
                         placeholder="搜索类型名称..."
