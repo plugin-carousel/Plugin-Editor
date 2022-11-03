@@ -26,8 +26,14 @@ jobs:
           echo "${{ secrets.NPMRC_TOKEN }}" > .npmrc
           npm install
           npm run releases
-          echo "${{ secrets.SH_KEY }}" > /root/.ssh/id_rsa
-          ssh -i /root/.ssh/id_rsa ido@42.192.223.227 -p 22
+      - name: deploy file to server
+        uses: wlixcc/SFTP-Deploy-Action@v1.0
+        with:
+          username: "root" #ssh user name
+          server: "${{ secrets.SERVER_IP }}" #引用之前创建好的secret
+          ssh_private_key: ${{ secrets.SH_KEY }} #引用之前创建好的secret
+          local_path: "./App/build/*" # 对应我们项目build的文件夹路径
+          remote_path: "/home/www/html/"
 
       # - name: Deploy 🚀
       #   uses: JamesIves/github-pages-deploy-action@v4
