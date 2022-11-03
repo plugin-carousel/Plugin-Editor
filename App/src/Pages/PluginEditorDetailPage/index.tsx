@@ -283,6 +283,7 @@ const PluginEditorDetail = (): JSX.Element => {
                                             className={style.pluginEditorDetailPage_img_Skeleton}
                                         ></div>
                                         <img
+                                            // crossOrigin="use-credentials"
                                             src={item?.cover}
                                             onLoad={() => {
                                                 const imgSkeleton = document.querySelector(
@@ -348,6 +349,7 @@ const PluginEditorDetail = (): JSX.Element => {
                                             })}
                                         >
                                             <img
+                                                // crossOrigin="use-credentials"
                                                 src={item?.cover}
                                                 className={getClassNames({
                                                     [style.pluginEditorDetail_img_active]: true,
@@ -363,6 +365,7 @@ const PluginEditorDetail = (): JSX.Element => {
                                     >
                                         <div className={style.pluginEditorDetailPage_imgBox}>
                                             <img
+                                                // crossOrigin="use-credentials"
                                                 src={item?.cover}
                                                 className={style.pluginEditorDetail_Img}
                                                 onClick={() => handleClickImg(i)}
