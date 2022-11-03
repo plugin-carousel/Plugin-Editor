@@ -26,9 +26,17 @@ jobs:
           echo "${{ secrets.NPMRC_TOKEN }}" > .npmrc
           npm install
           npm run releases
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: deploy file to server
+        uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
-          branch: page
-          folder: ./App/build # The folder the action should deploy.
+          username: "root" #ssh user name
+          server: "${{ secrets.SERVER_IP }}" #引用之前创建好的secret
+          ssh_private_key: ${{ secrets.SH_KEY }} #引用之前创建好的secret
+          local_path: "./App/build/*" # 对应我们项目build的文件夹路径
+          remote_path: "/home/www/html/"
+
+      # - name: Deploy 🚀
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     branch: page
+      #     folder: ./App/build # The folder the action should deploy.
