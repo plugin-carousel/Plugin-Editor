@@ -283,7 +283,6 @@ const PluginEditorDetail = (): JSX.Element => {
                                             className={style.pluginEditorDetailPage_img_Skeleton}
                                         ></div>
                                         <img
-                                            // crossOrigin="use-credentials"
                                             src={item?.cover}
                                             onLoad={() => {
                                                 const imgSkeleton = document.querySelector(

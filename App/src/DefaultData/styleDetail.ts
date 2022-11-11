@@ -8,7 +8,8 @@ export interface styleItemType {
 export const ChinaStyleDetailList: styleItemType[] = [
     {
         id: '01',
-        cover: 'https://s1.imgbed.xyz/2022/11/11/CCHUp.png',
+        cover: 'https://s1.imgbed.xyz/2022/11/11/CG8Fb.png',
+
         // cover: bg_ChinaStyle_01,
         style: 'China',
         title: '点击方块类 - 二维多选',
