@@ -528,6 +528,7 @@
         justify-content: center;
         > img {
             width: 35.1rem;
+            // width: calc(100% - 2.4rem);
             height: auto;
             box-shadow: none;
             border-radius: 0.4rem;
@@ -540,7 +541,7 @@
         height: 4rem;
         border-radius: 2px 8px 8px 2px;
         background-color: rgba(#000, 0.2);
-        left: 0;
+        left: 0.8rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -553,7 +554,7 @@
     }
     .pluginEditorDetail_MobileRightButton {
         position: absolute;
-        right: 0;
+        right: 0.8rem;
         width: 2rem;
         height: 4rem;
         background-color: rgba(#000, 0.2);
@@ -600,8 +601,8 @@
         border: 0.1rem solid $neutral_200;
         margin: 0.2rem;
         &:hover {
-            width: 13rem;
-            height: 12rem;
+            width: 10.8rem;
+            height: 10rem;
             box-shadow: none;
         }
     }
