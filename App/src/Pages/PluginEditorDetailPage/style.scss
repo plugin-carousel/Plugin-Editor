@@ -198,13 +198,13 @@
 .pluginEditorDetailPage_imgBox_active {
     background-color: rgba($primary_600, 0.6);
     border-radius: 0.6rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .pluginEditorDetail_img_active {
     margin: 0.2rem;
+    min-height: 11rem;
     width: 16rem;
     border-radius: 0.6rem;
     border: 0.1rem solid $primary_600;
@@ -415,7 +415,6 @@
     .pluginEditorDetailPage_imgBox_active {
         background-color: rgba($primary_600, 0.6);
         border-radius: 0.6rem;
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -621,5 +620,6 @@
         border: 0.1rem solid $primary_600;
         background-color: #fff;
         padding: 0.2rem;
+        min-height: auto;
     }
 }
