@@ -225,7 +225,7 @@ const PluginEditorHome = (): JSX.Element => {
                     <div className={style.pluginEditorHome_Mobiletitle}>插件主题风格</div>
                     <input
                         className={style.PluginEditorHome_search}
-                        placeholder="搜索类型名称..."
+                        // placeholder="搜索类型名称..."
                         value={searchValue}
                         onChange={(e) => setSearchValue(e.target.value)}
                         onKeyUp={(e) => handleKeyup(e)}
