@@ -16,7 +16,7 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@datareachable/webpack": "^0.0.18",
+        "@datareachable/webpack": "^0.0.19",
         "@types/jest": "29.1.2",
         "@types/node": "18.11.0",
         "@types/react": "18.0.21",
